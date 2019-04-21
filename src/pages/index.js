@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import Layout from "../components/layout"
 
 import Image from "../components/image"
 import SEO from "../components/seo"
@@ -17,10 +18,8 @@ import selfdrawnbw from "../images/selfdrawnbw.jpg"
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  // background-image: linear-gradient(lavender, rgba(255, 0, 0, 0));
   background-color: #f9f8f8;
   background-size: cover;
-  // overflow: visible;
 
   display: flex;
   flex-direction: column;
@@ -53,17 +52,14 @@ const Background = styled.img`
   height: 500px;
   position: absolute;
   z-index: 1;
-  // display: bottom;
   bottom: 0px;
 `
 const BodyContainer = styled.div`
   width: 500px;
-  // height: 680px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // margin-top: 700px;
   z-index: 4;
   margin: 50px;
 `
@@ -75,21 +71,10 @@ const HeadContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   align-content: flex-start;
-  // background-color: none;
-  // margin-top: 500px;
   overflow-y: visible;
-  // position: fixed;
-  // top: 0;
   z-index: 5;
 `
 const Title = styled.h1`
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
-  // width: 100vw;
-  // height: auto;
-
   font-size: 60px;
   color: #f9f8f8;
 
@@ -103,7 +88,6 @@ const Subtitle = styled.h2`
   font-style: italic;
   font-weight: light;
   color: #666368;
-  // color: white;
   z-index: 5;
 `
 const SectionTitle = styled.h2`
@@ -111,18 +95,14 @@ const SectionTitle = styled.h2`
   text-align: left;
   width: 100%;
   z-index: 5;
-  // color: white;
 `
 const Section = styled.p`
   font-size: 18px;
   text-align: justify;
   width: 100%;
   z-index: 5;
-  // color: #fffffb;
 `
-const Logo = styled.a`
-  // filter: invert(100%);
-`
+const Logo = styled.a``
 const ImgContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -144,9 +124,8 @@ const ImgContainer = styled.div`
   }
 `
 const Profile = styled.img`
-  // width: 250px;
-  /* height: 400px; */
   position: absolute;
+  width: 100%;
 `
 
 const IndexPage = () => (
