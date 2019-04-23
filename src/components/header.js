@@ -43,7 +43,6 @@ const Header = () => (
     <a href="/">
       <Logo src={signature} />
     </a>
-    {/* <Subtitle>I like to make things.</Subtitle> */}
     <Navigation />
   </Container>
 )

@@ -11,12 +11,11 @@ const List = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0;
-  // overflow: visible;
 
   & > li {
     width: 57px;
     float: right;
-    display: inline;
+    /* display: inline; */
     margin: 20px;
     font-size: 16px;
     font-weight: semi-bold;
@@ -24,7 +23,6 @@ const List = styled.ul`
 
     & > a {
       color: #333234;
-      // color: #fffffb;
       text-decoration: none;
 
       &:hover {
@@ -48,7 +46,6 @@ class Navigation extends React.Component {
         </li>
         <li>
           <Link to="/#about2">About</Link>
-          {/* <Link to="/page-2/">About</Link> */}
         </li>
       </List>
     )

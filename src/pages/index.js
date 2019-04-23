@@ -14,6 +14,7 @@ import self from "../images/self.jpg"
 import selfdrawn from "../images/self-drawn.jpg"
 import selfbw from "../images/selfbw.jpg"
 import selfdrawnbw from "../images/selfdrawnbw.jpg"
+import paper from "../images/paper.png"
 
 const Container = styled.div`
   width: 100vw;
@@ -109,7 +110,16 @@ const Section = styled.p`
   width: 100%;
   z-index: 5;
 `
-const Logo = styled.a``
+const Logo = styled.a`
+  z-index: 10;
+`
+
+const BackImg = styled.img`
+  width: 50%;
+  height: auto;
+  position: absolute;
+`
+
 const ImgContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -139,16 +149,14 @@ const IndexPage = () => (
   <div>
     {/* <Navigation /> */}
     <Container>
+      <BackImg src={paper} alt="paper" />
       <HeadContainer>
         <Logo href="/">
           <img src={signature} alt="NxO." />
         </Logo>
         <Subtitle>I like to make things.</Subtitle>
         <Navigation />
-        {/* <a href="#About">about</a> */}
       </HeadContainer>
-      {/* <Navigation /> */}
-      {/* <Header /> */}
     </Container>
     <AboutContainer id="about2">
       {/* <a id="About" /> */}
