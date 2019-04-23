@@ -32,6 +32,14 @@ const Container = styled.div`
     margin-bottom: 4%;
   }
 `
+const HeadContainer = styled.div`
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* text-align: justify; */
+`
 const Title = styled.h1`
   font-size: 64px;
   /* font-weight: 300; */
@@ -43,6 +51,7 @@ const Subtitle = styled.h2`
   font-size: 20px;
   font-style: italic;
   font-weight: 300;
+  line-height: 1.5;
   color: #666368;
 `
 const ProjectListContainer = styled.div`
@@ -81,11 +90,17 @@ const Image = styled.img`
 const Projects = () => (
   <Container>
     <Header />
-    <SEO title="Projects" />
-    <Title>Projects.</Title>
-    <Subtitle>
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    </Subtitle>
+    <HeadContainer>
+      <SEO title="Projects" />
+      <Title>Projects.</Title>
+      <HeadContainer>
+        <Subtitle>
+          "Do the things that incline you toward the big questions, and avoid
+          the things that would reduce you and make you trivial."
+          -&nbsp;George&nbsp;Saunders
+        </Subtitle>
+      </HeadContainer>
+    </HeadContainer>
     <ProjectListContainer>
       <ProjectContainer>
         <h2>Wrapped</h2>

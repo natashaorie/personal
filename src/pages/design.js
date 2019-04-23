@@ -64,18 +64,21 @@ const HeadContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: justify;
+  /* text-align: justify; */
 `
 const Title = styled.h1`
   font-size: 64px;
   color: #333234;
   margin-top: 100px;
   margin-bottom: 50px;
+  text-align: justify;
 `
 const Subtitle = styled.h2`
   font-size: 20px;
   font-style: italic;
   font-weight: 300;
+  line-height: 1.5;
+  /* text-align: justify; */
   color: #666368;
   margin-bottom: 60px;
 `
@@ -315,9 +318,15 @@ class Design extends React.Component {
           <Header />
           <HeadContainer>
             <Title>Art & Design.</Title>
-            <Subtitle>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            </Subtitle>
+            <HeadContainer>
+              <Subtitle>
+                "To sing you must first open your mouth. You must have a pair of
+                lungs, and a little knowledge of music. It is not necessary to
+                have an accordion, or a guitar. The essential thing is to want
+                to sing. This then is a song. I am singing."
+                -&nbsp;Henry&nbsp;Miller
+              </Subtitle>
+            </HeadContainer>
             <Section>
               I like to think that my work reflects myself. At least thats what
               I try to acheive. I am inspired mostly by color. The things that I
