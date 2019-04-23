@@ -15,7 +15,7 @@ import mouse from "../images/mouse.mp4"
 
 const Container = styled.div`
   width: 100vw;
-  // height: 100vh;
+  height: auto;
   background-image: linear-gradient(#f9f8f8, #bbb5bd);
   background-color: #f9f8f8;
   background-size: cover;
@@ -30,16 +30,19 @@ const Container = styled.div`
     width: 80%;
     margin-left: 8%;
     margin-bottom: 4%;
+  }
 `
 const Title = styled.h1`
   font-size: 64px;
+  /* font-weight: 300; */
   color: #333234;
   margin-top: 100px;
+  margin-bottom: 50px;
 `
 const Subtitle = styled.h2`
   font-size: 20px;
   font-style: italic;
-  font-weight: light;
+  font-weight: 300;
   color: #666368;
 `
 const ProjectListContainer = styled.div`
@@ -51,36 +54,35 @@ const ProjectListContainer = styled.div`
   overflow: visible;
 `
 const ImageContainer = styled.div`
-  width: 80%;
+  width: 100%;
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   overflow: visible;
 `
 const ProjectContainer = styled.div`
   width: 100%;
-  // background-color: #fffffb;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  flex-shrink: 1;
+  flex-wrap: wrap;
   margin: 50px;
 `
 const Image = styled.img`
   height: 300px;
+  width: auto;
+  margin: 10px;
+  flex-shrink: 1;
+  flex-basis: auto;
 `
-// const images = [
-//   { original: mouse2, sizes: 100 },
-//   { original: mouse1 },
-//   { original: mouse },
-// ]
 
 const Projects = () => (
   <Container>
     <Header />
     <SEO title="Projects" />
     <Title>Projects.</Title>
-    {/* <h1>Hi from the projects page</h1> */}
-    {/* <p>Welcome to projects</p> */}
     <Subtitle>
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     </Subtitle>
@@ -114,7 +116,6 @@ const Projects = () => (
             <source src={mouse} type="video/mp4" />
           </video>
         </ImageContainer>
-        {/* <ImageGallery items={images} /> */}
       </ProjectContainer>
     </ProjectListContainer>
   </Container>

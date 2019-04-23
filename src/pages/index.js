@@ -75,7 +75,9 @@ const HeadContainer = styled.div`
   z-index: 5;
 `
 const Title = styled.h1`
-  font-size: 60px;
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1.5;
   color: #f9f8f8;
 
   & mark.highlight {
@@ -83,11 +85,15 @@ const Title = styled.h1`
     color: #b118c8;
   }
 `
+const Blurb = styled.div`
+  margin-bottom: 50px;
+`
 const Subtitle = styled.h2`
   font-size: 20px;
   font-style: italic;
-  font-weight: light;
-  color: #666368;
+  font-weight: 300;
+  /* color: #666368; */
+  color: #aa6da3;
   z-index: 5;
 `
 const SectionTitle = styled.h2`
@@ -98,7 +104,8 @@ const SectionTitle = styled.h2`
 `
 const Section = styled.p`
   font-size: 18px;
-  text-align: justify;
+  line-height: 1.8;
+  /* text-align: justify; */
   width: 100%;
   z-index: 5;
 `
@@ -150,23 +157,26 @@ const IndexPage = () => (
         <Profile src={selfbw} alt="self" className="self-image" />
       </ImgContainer>
       <BodyContainer>
-        <Title>Hi, I'm Natasha X. Orie.</Title>
-        <Title>
-          Student-researcher at{" "}
-          <mark class="highlight"> UC&nbsp;Riverside</mark> and future intern at{" "}
-          <mark class="highlight">Microsoft</mark>.
-        </Title>
+        <Blurb>
+          <Title>Hi, I'm Natasha X. Orie.</Title>
+          <Title>
+            Student-researcher at{" "}
+            <mark class="highlight"> UC&nbsp;Riverside</mark> and future intern
+            at <mark class="highlight">Microsoft.</mark>
+          </Title>
+        </Blurb>
         <div>
-          <SectionTitle>What am I?</SectionTitle>
+          {/* <SectionTitle>What am I?</SectionTitle> */}
           <Section>
-            I am a 4th year Computer Science student at the University of
-            California, Riverside.
+            When I was little, I wanted to be a fashion designer, a hair
+            stylist, an author. When people find out what I do now, they always
+            want to know:
           </Section>
-          <SectionTitle>Where am I?</SectionTitle>
+          <SectionTitle>How did I end up in tech?</SectionTitle>
           <Section>
-            Currently, I am doing research in UCR's Microfluidics lab and the
-            Networks lab. This summer I will be in Seattle working for Microsoft
-            as a Program Manager intern.
+            I don't believe in doing things by halves. When I started on my
+            journey into computer science, I was almost positive that I was
+            going to fail. But I decided I
           </Section>
           <Section>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec

@@ -43,8 +43,7 @@ import robot from "../images/robot-sticker.png"
 
 const Container = styled.div`
   width: 100vw;
-  height: 100vh;
-  // background-image: linear-gradient(lavender, rgba(255, 0, 0, 0));
+  height: auto;
   background-color: #f9f8f8;
   background-size: cover;
 
@@ -57,10 +56,10 @@ const Container = styled.div`
     width: 80%;
     margin-left: 8%;
     margin-bottom: 4%;
+  }
 `
-const Description = styled.div`
+const HeadContainer = styled.div`
   width: 70%;
-  margin-top: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,32 +67,29 @@ const Description = styled.div`
   text-align: justify;
 `
 const Title = styled.h1`
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
-  // width: 100vw;
-  // height: auto;
-
   font-size: 64px;
   color: #333234;
+  margin-top: 100px;
+  margin-bottom: 50px;
 `
 const Subtitle = styled.h2`
   font-size: 20px;
   font-style: italic;
-  font-weight: light;
+  font-weight: 300;
   color: #666368;
+  margin-bottom: 60px;
 `
 const Section = styled.p`
   font-size: 18px;
   text-align: justify;
   width: 100%;
+  margin-bottom: 100px;
 `
 const GalleryContainer = styled.div`
   width: 90%;
   min-height: 100%;
   display: flex;
-  // overflow: auto;
+  /* overflow: visible; */
 `
 
 const photos = [
@@ -317,7 +313,7 @@ class Design extends React.Component {
         {/* <Navigation /> */}
         <Container>
           <Header />
-          <Description>
+          <HeadContainer>
             <Title>Art & Design.</Title>
             <Subtitle>
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
@@ -328,7 +324,7 @@ class Design extends React.Component {
               make like to paint themselves in broad strokes in my head before I
               bring them to life.
             </Section>
-          </Description>
+          </HeadContainer>
           <GalleryContainer>
             <Gallery photos={photos} onClick={this.openLightbox} margin={5} />
             <Lightbox
