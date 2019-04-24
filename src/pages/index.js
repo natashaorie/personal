@@ -175,17 +175,9 @@ const IndexPage = () => (
         </Blurb>
         <div>
           {/* <SectionTitle>What am I?</SectionTitle> */}
-          <Section>
-            When I was little, I wanted to be a fashion designer, a hair
-            stylist, an author. When people find out what I do now, they always
-            want to know:
-          </Section>
+          <Section>Coming soon!</Section>
           <SectionTitle>How did I end up in tech?</SectionTitle>
-          <Section>
-            I don't believe in doing things by halves. When I started on my
-            journey into computer science, I was almost positive that I was
-            going to fail. But I decided I
-          </Section>
+          <Section>I don't believe in doing things by halves.</Section>
           <Section>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
             dui non velit egestas facilisis id commodo orci. Nullam aliquam odio
