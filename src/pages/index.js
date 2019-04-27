@@ -7,6 +7,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import Navigation from "../components/navigation"
 import Footer from "../components/footer"
+import { SocialIcon } from "react-social-icons"
 
 import signature from "../images/sig2.png"
 import background from "../images/dark-roses.jpg"
@@ -42,6 +43,7 @@ const AboutContainer = styled(Container)`
   background-color: #bbb5bd;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: flex-start;
 
   flex: 3;
@@ -63,6 +65,9 @@ const BodyContainer = styled.div`
   align-items: center;
   z-index: 4;
   margin: 50px;
+`
+const ProfileContainer = styled(BodyContainer)`
+  width: auto;
 `
 const HeadContainer = styled.div`
   width: 100%;
@@ -118,14 +123,18 @@ const BackImg = styled.img`
   width: 50%;
   height: auto;
   position: absolute;
+
+  @media only screen and (max-width: 800px) {
+    width: 90%;
+  }
 `
 
 const ImgContainer = styled.div`
   display: flex;
   flex-direction: row;
-  margin-top: 60px;
+  /* margin-top: 60px; */
   position: relative;
-  height: 400px;
+  height: 450px;
   width: 300px;
 
   .self-image {
@@ -144,6 +153,25 @@ const Profile = styled.img`
   position: absolute;
   width: 100%;
 `
+const List = styled.ul`
+  list-style-type: none;
+  margin: 0px;
+  padding: 0;
+
+  & > li {
+    width: auto;
+    float: right;
+    /* display: inline; */
+    margin: 20px;
+    font-size: 16px;
+    font-weight: semi-bold;
+    overflow: visible;
+
+    &:hover {
+      color: #aa6da3;
+    }
+  }
+`
 
 const IndexPage = () => (
   <div>
@@ -160,10 +188,37 @@ const IndexPage = () => (
     </Container>
     <AboutContainer id="about2">
       {/* <a id="About" /> */}
-      <ImgContainer>
-        <Profile src={selfdrawnbw} alt="self" />
-        <Profile src={selfbw} alt="self" className="self-image" />
-      </ImgContainer>
+      <ProfileContainer>
+        <ImgContainer>
+          <Profile src={selfdrawnbw} alt="self" />
+          <Profile src={selfbw} alt="self" className="self-image" />
+        </ImgContainer>
+        <List>
+          <li>
+            <SocialIcon
+              url="https://www.instagram.com/natasha.orie/"
+              bgColor="#b118c8"
+            />
+          </li>
+          <li>
+            <SocialIcon url="http://github.com/natashaorie" bgColor="#b118c8" />
+          </li>
+
+          <li>
+            <SocialIcon
+              url="http://linkedin.com/in/natashaorie"
+              bgColor="#b118c8"
+            />
+          </li>
+          <li>
+            <SocialIcon
+              url="nxorie@gmail.com"
+              network="email"
+              bgColor="#b118c8"
+            />
+          </li>
+        </List>
+      </ProfileContainer>
       <BodyContainer>
         <Blurb>
           <Title>Hi, I'm Natasha X. Orie.</Title>

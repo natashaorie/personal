@@ -16,11 +16,8 @@ const Logo = styled.img`
 `
 
 const Container = styled.div`
-  // width: 120 px;
-  // height: 50px;
-  // display: flex;
-  // flex-direction: row;
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -29,6 +26,7 @@ const Container = styled.div`
   padding-bottom: 20px;
   position: fixed;
   top: 0;
+  z-index: 100;
 `
 
 const Subtitle = styled.h2`

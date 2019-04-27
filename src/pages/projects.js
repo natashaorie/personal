@@ -5,10 +5,18 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Header from "../components/header"
+import { Carousel } from "react-responsive-carousel"
+import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 // import ImageGallery from "react-image-video-gallery"
-import wrappedSignin from "../images/wrapped-signin.png"
-import wrappedSignup from "../images/wrapped-signup.png"
+import wrappedSignin from "../projects/wrapped-signin.png"
+import wrappedSignup from "../projects/wrapped-signup.png"
+import wrappedDash from "../projects/wrapped-dashboard.png"
+import wrappedEvent from "../projects/wrapped-event.png"
+
+import shoomHome from "../projects/shoomHome.png"
+import shoomResults from "../projects/shoomResults.png"
+
 import mouse2 from "../images/mouse2.jpg"
 import mouse1 from "../images/mouse1.jpg"
 import mouse from "../images/mouse.mp4"
@@ -55,17 +63,25 @@ const Subtitle = styled.h2`
   color: #666368;
 `
 const ProjectListContainer = styled.div`
-  width: 80%;
+  width: 60%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: visible;
+
+  @media only screen and (max-width: 600px) {
+    width: 80%;
+  }
 `
 const ImageContainer = styled.div`
-  width: 100%;
+  width: 70%;
+  /* max-height: 500px; */
+  height: auto;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
+  flex: 1 1 auto;
   justify-content: center;
   align-items: center;
   overflow: visible;
@@ -73,7 +89,7 @@ const ImageContainer = styled.div`
 const ProjectContainer = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   flex-shrink: 1;
   flex-wrap: wrap;
@@ -103,34 +119,64 @@ const Projects = () => (
     </HeadContainer>
     <ProjectListContainer>
       <ProjectContainer>
-        <h2>Wrapped</h2>
-        <p>
-          Wrapped is a service that allows you to track gift ideas and schedule
-          email reminders at a chosen time before the event. Wrapped was created
-          as my Networks senior design project.
-        </p>
         <ImageContainer>
-          <Image src={wrappedSignin} alt="Wrapped" />
-          <Image src={wrappedSignup} alt="Wrapped" />
+          <h2>Wrapped</h2>
+          <p>
+            Wrapped is a service that allows you to track gift ideas and
+            schedule email reminders at a chosen time before the event. Wrapped
+            was created as my Networks senior design project.
+          </p>
         </ImageContainer>
+        {/* <Image src={wrappedSignin} alt="Wrapped" />
+          <Image src={wrappedSignup} alt="Wrapped" /> */}
+        <Carousel showArrows={true} showThumbs={false}>
+          <div>
+            <img src={wrappedSignin} />
+          </div>
+          <div>
+            <img src={wrappedSignup} />
+          </div>
+          <div>
+            <img src={wrappedDash} />
+          </div>
+          <div>
+            <img src={wrappedEvent} />
+          </div>
+        </Carousel>
       </ProjectContainer>
       <ProjectContainer>
-        <h2>Shoom</h2>
-        <p>Coming soon!</p>
+        <ImageContainer>
+          <h2>Shoom</h2>
+          <p>Coming soon!</p>
+        </ImageContainer>
+        <Carousel showArrows={true} showThumbs={false}>
+          <div>
+            <img src={shoomHome} />
+          </div>
+          <div>
+            <img src={shoomResults} />
+          </div>
+        </Carousel>
       </ProjectContainer>
       <ProjectContainer>
-        <h2>Micromouse</h2>
-        <p>
-          Our micromouse has gone through many iterations- MicroMoose,
-          MangoMouse, and now this year he's named MoodyMouse.
-        </p>
         <ImageContainer>
-          <Image src={mouse2} alt="mouse" />
-          <Image src={mouse1} alt="mouse" />
-          <video width="200" controls>
-            <source src={mouse} type="video/mp4" />
-          </video>
+          <h2>Micromouse</h2>
+          <p>
+            Our micromouse has gone through many iterations- MicroMoose,
+            MangoMouse, and now this year he's named MoodyMouse.
+          </p>
         </ImageContainer>
+        <Carousel showArrows={true} showThumbs={false} dynamicHeight={true}>
+          <div>
+            <img src={mouse2} alt="mouse" />
+          </div>
+          <div>
+            <img src={mouse1} alt="mouse" />
+          </div>
+          {/* <div>
+            <video controls src={mouse} type="video/mp4" />
+          </div> */}
+        </Carousel>
       </ProjectContainer>
     </ProjectListContainer>
   </Container>
