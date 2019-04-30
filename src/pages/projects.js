@@ -86,6 +86,7 @@ const ImageContainer = styled.div`
   align-items: center;
   overflow: visible;
 `
+
 const ProjectContainer = styled.div`
   width: 100%;
   display: flex;
@@ -95,12 +96,19 @@ const ProjectContainer = styled.div`
   flex-wrap: wrap;
   margin: 50px;
 `
+const TestContainer = styled(ProjectContainer)`
+  width: 50%;
+  flex-wrap: none;
+`
 const Image = styled.img`
   height: 300px;
   width: auto;
   margin: 10px;
   flex-shrink: 1;
   flex-basis: auto;
+`
+const Video = styled.video`
+  height: auto;
 `
 
 const Projects = () => (
@@ -177,6 +185,9 @@ const Projects = () => (
             <video controls src={mouse} type="video/mp4" />
           </div> */}
         </Carousel>
+        <div>
+          <Video controls src={mouse} type="video/mp4" />
+        </div>
       </ProjectContainer>
     </ProjectListContainer>
   </Container>

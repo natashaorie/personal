@@ -40,6 +40,7 @@ import ephemeral from "../images/ephemeral.jpg"
 import wrappedLogo from "../images/wrapped_logo.png"
 import lanterns from "../images/lantern-sticker.png"
 import robot from "../images/robot-sticker.png"
+import wendyMarvel from "../images/w_marvel.png"
 
 const Container = styled.div`
   width: 100vw;
@@ -96,6 +97,13 @@ const GalleryContainer = styled.div`
 `
 
 const photos = [
+  {
+    src: wendyMarvel,
+    width: 2100,
+    height: 1500,
+    caption:
+      "My friend Wendy as Captain Marvel (Photoshop, 2019). Background taken from WallpaperUP.",
+  },
   {
     src: lanterns,
     width: 12500,
