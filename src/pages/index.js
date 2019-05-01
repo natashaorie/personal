@@ -197,24 +197,25 @@ const IndexPage = () => (
           <li>
             <SocialIcon
               url="https://www.instagram.com/natasha.orie/"
-              bgColor="#b118c8"
+              bgColor="#f9f8f8"
             />
           </li>
           <li>
-            <SocialIcon url="http://github.com/natashaorie" bgColor="#b118c8" />
+            <SocialIcon url="http://github.com/natashaorie" bgColor="#f9f8f8" />
           </li>
 
           <li>
             <SocialIcon
               url="http://linkedin.com/in/natashaorie"
-              bgColor="#b118c8"
+              bgColor="#f9f8f8"
             />
           </li>
           <li>
             <SocialIcon
-              url="nxorie@gmail.com"
+              url="mailto:nxorie@gmail.com"
+              target="_blank"
               network="email"
-              bgColor="#b118c8"
+              bgColor="#f9f8f8"
             />
           </li>
         </List>
@@ -230,17 +231,18 @@ const IndexPage = () => (
         </Blurb>
         <div>
           {/* <SectionTitle>What am I?</SectionTitle> */}
-          <Section>Coming soon!</Section>
+          <Section>
+            On the side I like to paint and make graphics. Occasionally I climb
+            up walls and lift heavy things.
+          </Section>
           <SectionTitle>How did I end up in tech?</SectionTitle>
           <Section>I don't believe in doing things by halves.</Section>
           <Section>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
-            dui non velit egestas facilisis id commodo orci. Nullam aliquam odio
-            et commodo interdum. Nam sed tincidunt eros, nec porttitor enim. Sed
-            luctus augue urna, sit amet rhoncus metus consequat non. Sed gravida
-            bibendum ante, in lacinia ligula efficitur ac. Sed laoreet metus eu
-            eros lobortis vehicula in eu dolor. Nam felis est, auctor sed
-            elementum vel, blandit in ex. Pellentesque vitae massa est.
+            When people ask how I chose between art and tech, or how I balance
+            the two, the answer is: I don't. All of my work is created through a
+            blend of the many approaches that I learned through each discipline.
+            The way I describe it is: my insticts are artistic and my skills are
+            technical.
           </Section>
           <SectionTitle>Who am I?</SectionTitle>
         </div>

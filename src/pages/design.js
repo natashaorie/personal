@@ -8,6 +8,7 @@ import Navigation from "../components/navigation"
 import Header from "../components/header"
 import styled from "styled-components"
 import Footer from "../components/footer"
+import pricing from "../documents/pricing-guidelines.pdf"
 
 import framer from "../images/framerGraphic.png"
 import mongoDB from "../images/mongoDB.png"
@@ -65,6 +66,7 @@ const HeadContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* margin-bottom: 100px; */
   /* text-align: justify; */
 `
 const Title = styled.h1`
@@ -87,7 +89,7 @@ const Section = styled.p`
   font-size: 18px;
   text-align: justify;
   width: 100%;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
 `
 const GalleryContainer = styled.div`
   width: 90%;
@@ -335,6 +337,14 @@ class Design extends React.Component {
                 -&nbsp;Henry&nbsp;Miller
               </Subtitle>
             </HeadContainer>
+            <Section>
+              I am OPEN for comission! Please checkout my pricing guidelines{" "}
+              <a href={pricing} target="_blank">
+                here
+              </a>{" "}
+              and shoot me an <a href="mailto:nxorie@gmail.com"> email </a> if
+              you're interested.
+            </Section>
             <Section>
               I like to think that my work reflects myself. At least thats what
               I try to acheive. I am inspired mostly by color. The things that I
