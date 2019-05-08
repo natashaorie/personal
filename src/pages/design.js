@@ -339,11 +339,14 @@ class Design extends React.Component {
             </HeadContainer>
             <Section>
               I am OPEN for comission! Please checkout my pricing guidelines{" "}
-              <a href={pricing} target="_blank">
+              <a href={pricing} title="Pricing Guidelines" target="_blank">
                 here
               </a>{" "}
-              and shoot me an <a href="mailto:nxorie@gmail.com"> email </a> if
-              you're interested.
+              and shoot me an{" "}
+              <a href="mailto:nxorie@gmail.com" target="_blank">
+                email
+              </a>{" "}
+              if you're interested.
             </Section>
             <Section>
               I like to think that my work reflects myself. At least thats what
